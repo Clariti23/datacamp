@@ -57,3 +57,8 @@ plt.shwo()
 # Missing Completely at Random: There is no relationship between missing values and other values. Missingness is entirely due to chance. For example, a human makes errors entering data.
 # Missing at Random: There is some relationship between the missing values and the observed values.
 # Missing not at Random: There is some relationship between the missing values and unobserved values.
+
+# Drop missing values
+banking_dropped  = banking.dropna[subset= ['acct_no']]
+banking_dropped.head()
+
