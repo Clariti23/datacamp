@@ -44,3 +44,16 @@ birthdays['Birthday'] = birthdays['Birthday'].dt.strftime("%d-%m-%Y")
 # Treatment of missing data
 missing = banking[banking['acct_no'].isna()]
 complete = banking[~banking['acct_no'].isna()]
+
+# Describe missing data
+missing.describe()
+
+# Visualize
+sorted_info = banking.sort_values(by='acct_no')
+msno.matrix(sorted_info)
+plt.shwo()
+
+# Types of missingness
+# Missing Completely at Random: There is no relationship between missing values and other values. Missingness is entirely due to chance. For example, a human makes errors entering data.
+# Missing at Random: There is some relationship between the missing values and the observed values.
+# Missing not at Random: There is some relationship between the missing values and unobserved values.
